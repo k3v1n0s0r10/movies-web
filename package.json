@@ -1,0 +1,24 @@
+{
+  "name": "movies-web",
+  "version": "1.0.0",
+  "description": "Fast app built using esbuild",
+  "scripts": {
+    "build": "node build.js",
+    "power": "onchange -i -k 'src/**/*' -- node build.js",
+    "server": "wds --node-resolve --app-index build/ --root-dir='build' --open --watch",
+    "dev": "npm run power | npm run server"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@web/dev-server": "^0.1.5",
+    "esbuild": "^0.8.36"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "essass": "^1.0.12",
+    "onchange": "^7.1.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
