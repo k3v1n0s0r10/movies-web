@@ -3,22 +3,33 @@
   "version": "1.0.0",
   "description": "Fast app built using esbuild",
   "scripts": {
-    "build": "node build.js",
-    "power": "onchange -i -k 'src/**/*' -- node build.js",
+    "build": "node src/build.js",
+    "power": "onchange -i -k 'src/**/*' -- node src/build.js",
     "server": "wds --node-resolve --app-index build/ --root-dir='build' --open --watch",
     "dev": "npm run power | npm run server"
   },
   "license": "ISC",
   "devDependencies": {
     "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-redux": "^7.1.16",
     "@web/dev-server": "^0.1.5",
     "esbuild": "^0.8.36"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.3",
     "essass": "^1.0.12",
+    "framer-motion": "^3.2.2-rc.1",
     "onchange": "^7.1.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "tabWidth": 2,
+    "jsxSingleQuote": true,
+    "singleQuote": true
   }
 }

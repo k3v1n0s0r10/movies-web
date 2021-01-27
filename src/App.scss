@@ -1,3 +1,32 @@
-h1 {
-  font-size: 40rem;
+/*Global Styles*/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; //to use rems as pxs
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+input,
+textarea,
+label {
+  font-family: Roboto, sans-serif;
+}
+
+.app {
+  background-color: #080f28;
+  overflow: auto;
 }

@@ -1,11 +1,19 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import { render } from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import allReducers from './reducers';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-const App = React.lazy(() => import("./App"));
+const App = React.lazy(() => import('./App'));
 
-ReactDOM.render(
+const store = createStore(allReducers, composeWithDevTools());
+
+render(
   <React.Suspense fallback={<p>Loading...</p>}>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.Suspense>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
